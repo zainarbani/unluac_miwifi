@@ -12,7 +12,7 @@ import unluac.decompile.CodeExtract;
 public class BHeader {
 
   private static final byte[] signature = {
-          0x1B, 0x46, 0x61, 0x74, 0x65, 0x2f, 0x5a, 0x1b
+          0x21, 0x23, 0x2f, 0x75, 0x73, 0x72, 0x2f, 0x62
   };
   
   public final boolean debug = false;
@@ -67,7 +67,7 @@ public final Configuration config;
     // 4 byte Lua signature
     for(int i = 0; i < signature.length; i++) {
       if(buffer.get() != signature[i]) {
-        //throw new IllegalStateException("The input file does not have the signature of a valid Lua file.");
+        throw new IllegalStateException("The input file does not have the signature of a valid Lua file.");
       }
     }
     
