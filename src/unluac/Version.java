@@ -131,9 +131,9 @@ public class Version {
     this.major = major;
     this.minor = minor;
     name = major + "." + minor;
-    if(major == 5 && minor >= 0 && minor <= 4) {
+    /*if(major == 5 && minor >= 0 && minor <= 4) {
       switch(minor) {
-        case 0:
+        case 0:*/
           varargtype = new Setting<>(VarArgType.ARG);
           useupvaluecountinheader = new Setting<>(false);
           headertype = HeaderType.LUA50;
@@ -155,7 +155,7 @@ public class Version {
           useifbreakrewrite = new Setting<>(false);
           usegoto = new Setting<>(false);
           rkoffset = new Setting<>(250);
-          break;
+          /*break;
         case 1:
           varargtype = new Setting<>(VarArgType.HYBRID);
           useupvaluecountinheader = new Setting<>(false);
@@ -252,7 +252,7 @@ public class Version {
       }
     } else {
       throw new IllegalStateException();
-    }
+    }*/
     
     reservedWords = new HashSet<String>();
     reservedWords.add("and");
