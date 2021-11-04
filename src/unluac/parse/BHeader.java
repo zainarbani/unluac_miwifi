@@ -67,7 +67,7 @@ public final Configuration config;
     // 4 byte Lua signature
     for(int i = 0; i < signature.length; i++) {
       if(buffer.get() != signature[i]) {
-        throw new IllegalStateException("The input file does not have the signature of a valid Lua file.");
+        //throw new IllegalStateException("The input file does not have the signature of a valid Lua file.");
       }
     }
     
